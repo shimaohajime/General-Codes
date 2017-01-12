@@ -6,9 +6,9 @@ Created on Thu Nov 17 21:32:06 2016
 """
 
 class LogitDemandEstimation:
-    def __init__(datatype, datadir, price_file, x_file, iv_file, share_file, sales_file=None, marketsize_file=None, mktid_file, prodid_file,\
-    flag_TitleFE=0):
-        
+    def __init__(datatype, datadir, price_file, x_file, iv_file, share_file,  mktid_file, prodid_file,\
+    sales_file=None, marketsize_file=None, flag_TitleFE=0, flag_Display=1):
+        self.flag_Display=flag_Display
         if datatype=='csv':
             self.price = np.genfromtxt(datadir+price_file, delimiter=',')
             self.x = np.genfromtxt(datadir+x_file, delimiter=',')
